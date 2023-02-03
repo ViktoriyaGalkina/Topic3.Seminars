@@ -4,8 +4,24 @@
 // * Видимо ошибка в условии: 3-> 1, 8, 27
 // 5 -> 1, 8, 27, 64, 125
 
+
+// System.Console.WriteLine("Введите число N: ");
+// int N = Convert.ToInt32(Console.ReadLine());
+
+// for (int i = 1; i <= N; i++)
+// {
+//    System.Console.Write(Math.Pow(i, 3) + ", ");
+// }
+
+
+void PrintSquares(int x)
+{
+  for (int i = 1; i <= x; i++)
+{
+   System.Console.Write(Math.Pow(i, 3) + ", ");
+}  
+}
+
 System.Console.WriteLine("Введите число N: ");
 int N = Convert.ToInt32(Console.ReadLine());
-
-for (int i = 1; i <= N; i++)
-    System.Console.Write(Math.Pow(i, 3) + ", ");
+PrintSquares(N);

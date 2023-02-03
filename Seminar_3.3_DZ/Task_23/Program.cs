@@ -4,7 +4,7 @@
 // * Видимо ошибка в условии: 3-> 1, 8, 27
 // 5 -> 1, 8, 27, 64, 125
 
-
+// 1 вариант.
 // System.Console.WriteLine("Введите число N: ");
 // int N = Convert.ToInt32(Console.ReadLine());
 
@@ -14,6 +14,7 @@
 // }
 
 
+// 2 вариант.
 void PrintSquares(int x)
 {
   for (int i = 1; i <= x; i++)

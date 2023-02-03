@@ -11,17 +11,13 @@
 
 // int[] arr = Console.ReadLine().Split(" ").Select(int.Parse).ToArray(); 
 // Вывод массива одной строкой в массив целочисленных чисел.
-
-// или
-
 // System.Console.Write(string.Join("-", arr));
 
 
 System.Console.WriteLine("Введите пятизначное число: ");
 int number = Math.Abs(Convert.ToInt32(Console.ReadLine()));
+// int[] arr = number.Length;
 int[] array = Console.ReadLine().Split(" ").Select(int.Parse).ToArray();
-System.Console.Write(string.Join(", ", array));
-// string[] array= number.Length;
 
 
 if (number > 9999 && number < 100000)
@@ -32,6 +28,10 @@ if (number > 9999 && number < 100000)
     }
     else
     {
-        System.Console.WriteLine("Вы ввели не пятизначное число(");
+        System.Console.WriteLine("Число не является полиндромом");
     }
+}
+else
+{
+    System.Console.WriteLine("Вы ввели не пятизначное число!");
 }

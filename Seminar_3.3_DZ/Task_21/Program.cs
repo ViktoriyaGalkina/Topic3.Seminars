@@ -9,6 +9,26 @@
 // Math.Sqrt(квадратный корень из указанного числа)
 
 
+// 1 вариант.
+
+// System.Console.WriteLine("Введите координату x1: ");
+// int x1 = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine("Введите координату y1: ");
+// int y1 = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine("Введите координату y1: ");
+// int z1 = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine("Введите координату x2: ");
+// int x2 = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine("Введите координату y2: ");
+// int y2 = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine("Введите координату z2: ");
+// int z2 = Convert.ToInt32(Console.ReadLine());
+
+// System.Console.WriteLine($"Расстояние между точками в 3D пространстве: " + Math.Round(Math.Pow(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2) + Math.Pow((z2 - z1), 2), 0.5), 2));
+
+
+// 2 вариант.
+
 int InputNumber(string str) 
 {
     System.Console.WriteLine(str);

@@ -25,4 +25,5 @@ void PrintSquares(int x)
 
 System.Console.WriteLine("Введите число N: ");
 int N = Convert.ToInt32(Console.ReadLine());
+System.Console.WriteLine();
 PrintSquares(N);

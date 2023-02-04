@@ -6,32 +6,27 @@
 // 23432 -> да
 // 12821 -> да
 
-// git remote set-url origin -- ссылку перезаписать на репозиторий
-
-
 // int[] arr = Console.ReadLine().Split(" ").Select(int.Parse).ToArray(); 
 // Вывод массива одной строкой в массив целочисленных чисел.
 // System.Console.Write(string.Join("-", arr));
 
 
 System.Console.WriteLine("Введите пятизначное число: ");
-int number = Math.Abs(Convert.ToInt32(Console.ReadLine()));
-// int[] arr = number.Length;
-int[] array = Console.ReadLine().Split(" ").Select(int.Parse).ToArray();
+string number = Console.ReadLine();
+int arr = number.Length;
 
-
-if (number > 9999 && number < 100000)
-{
-    if (array[1] == array[5] && array[2] == array[4])
+if (arr == 5)
+ {
+    if (number[0] == number[4] && number[1] == number[3])
     {
-        System.Console.WriteLine("Число является палиндромом!");
+        System.Console.WriteLine("Число {number} является палиндромом!");
     }
     else
     {
-        System.Console.WriteLine("Число не является полиндромом");
+        System.Console.WriteLine("Число {number} не является полиндромом");
     }
-}
+ }
 else
-{
+ {
     System.Console.WriteLine("Вы ввели не пятизначное число!");
-}
+ }

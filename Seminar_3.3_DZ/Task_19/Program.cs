@@ -30,3 +30,16 @@ else
  {
     System.Console.WriteLine("Вы ввели не пятизначное число!");
  }
+
+
+
+// System.Console.Write("Введите число: ");
+// int num = Convert.ToInt32(Console.ReadLine()); 
+// if (num / 10000 == num % 10 && num / 1000 % 10 == num % 10000 / 1000)
+// {
+//     System.Console.WriteLine("Число является палиндромом");
+// }
+// else
+// {
+//     System.Console.WriteLine("Число не является палиндромом");
+// }

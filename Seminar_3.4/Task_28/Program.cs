@@ -8,11 +8,17 @@ int GetNumber(string text)
     System.Console.Write(text);
     return Convert.ToInt32(Console.ReadLine());
 }
-int num = GetNumber("Введите число: ");
-int result = 1;
-for (int i =1; i<=num; i++)
+
+int Multyply(int x)
 {
-result = result*i;
+    int result = 1;
+    for (int i = 1; i <= x; i++)
+    {
+        result = result * i;
+    }
+    return result;
 }
 
-System.Console.WriteLine($"Произведение чисел от 1 до {num} = {result}");
+int num = GetNumber("Введите число: ");
+
+System.Console.WriteLine($"Произведение чисел от 1 до {num} = {Multyply(num)}");

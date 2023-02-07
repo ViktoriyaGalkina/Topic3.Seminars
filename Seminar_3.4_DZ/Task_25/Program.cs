@@ -4,16 +4,23 @@
 // 2, 4 -> 16
 
 
-
-System.Console.WriteLine("Введите первое число");
-int A = Convert.ToInt32(Console.ReadLine());
-System.Console.WriteLine("Введите второе число");
-int B = Math.Abs(Convert.ToInt32(Console.ReadLine()));
-
-int result = 1;
-for (int i = 1; i <= B; i++)
+int GetNumber(string text)
 {
-    result = result * A;
+    System.Console.WriteLine(text);
+    return Math.Abs(Convert.ToInt32(Console.ReadLine()));
 }
 
-System.Console.WriteLine($"{A} в степени {B} равно: {result}");
+int Degree(int x, int y)
+{
+    int result = 1;
+    for (int i = 1; i <= y; i++)
+    {
+        result = result * x;
+    }
+    return result;
+}
+
+int A = GetNumber("Введите первое число: ");
+int B = GetNumber("Введите второе число: ");
+int res = Degree(A, B);
+System.Console.WriteLine($"{A} в степени {B} равно: {res}");

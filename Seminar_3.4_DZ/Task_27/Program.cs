@@ -20,8 +20,8 @@ int Sum(int number)
     int SumIndex = 0;
     for (int i = 0; i <= number; i++) 
     {
-        SumIndex = SumIndex + N % 10;
-        N = N / 10;
+        SumIndex = SumIndex + number % 10;
+        number = number / 10;
     }
     return SumIndex;
 }

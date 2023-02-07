@@ -4,6 +4,7 @@
 // * Видимо ошибка в условии: 3-> 1, 8, 27
 // 5 -> 1, 8, 27, 64, 125
 
+
 // 1 вариант.
 // System.Console.WriteLine("Введите число N: ");
 // int N = Convert.ToInt32(Console.ReadLine());

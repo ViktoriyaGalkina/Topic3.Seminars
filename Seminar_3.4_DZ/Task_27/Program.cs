@@ -7,34 +7,36 @@
 
 // 1 версия (математическая).
 
-int GetNumber(string text)
-{
-    System.Console.WriteLine(text);
-    return Math.Abs(Convert.ToInt32(Console.ReadLine()));
-}
+// int GetNumber(string text)
+// {
+//     System.Console.WriteLine(text);
+//     return Math.Abs(Convert.ToInt32(Console.ReadLine()));
+// }
 
-int Sum(int number)
-{
-    int SumIndex = 0;
-    for (int i = 0; i <= number; i++) 
-    {
-        SumIndex = SumIndex + number % 10;
-        number = number / 10;
-    }
-    return SumIndex;
-}
+// int Sum(int number)
+// {
+//     int SumIndex = 0;
+//     for (int i = 0; i <= number; i++)
+//     {
+//         SumIndex = SumIndex + number % 10;
+//         number = number / 10;
+//     }
+//     return SumIndex;
+// }
 
-int N = GetNumber("Введите число: ");
-System.Console.WriteLine($"Сумма цифр в числе равна: {Sum(N)} ");
+// int N = GetNumber("Введите число: ");
+// System.Console.WriteLine($"Сумма цифр в числе равна: {Sum(N)} ");
 
 
 
 // 2 версия(через массив).
 
-// int[] GetNumber(int[] text)
-// {
-//     System.Console.WriteLine[text];
-//     return Convert.ToInt32(Console.ReadLine(text));
-// }
+string GetNumber(string text)
+{
+    System.Console.WriteLine(text);
+    return Convert.ToInt32(Console.ReadLine());
+}
 
-// int[] N = GetNumber("Введите число: ");
+string N = GetNumber("Введите число: ");
+int len = N.Length;
+System.Console.WriteLine($"Сумма цифр в числе равна: {len[0]+len[N]} ");

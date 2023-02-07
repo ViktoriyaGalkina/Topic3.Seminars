@@ -5,6 +5,8 @@
 // 9012 -> 12
 
 
+// 1 версия (математическая).
+
 int GetNumber(string text)
 {
     System.Console.WriteLine(text);
@@ -27,8 +29,6 @@ int res = Sum(N);
 System.Console.WriteLine($"Сумма цифр в числе равна: {res} ");
 
 
-// if (N > 99)
-// {
-//     while (N > 1000)
-//         N = N / 10;
-//     System.Console.WriteLine($"Третья цифра числа: {N % 10}");
+
+
+// 2 версия(через массив).

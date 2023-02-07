@@ -12,7 +12,7 @@ int GetNumber(string text)
 
 int Degree(int x, int y)
 {
-    int result = 1;
+    int result = 1;                      
     for (int i = 1; i <= y; i++)
     {
         result = result * x;

@@ -13,8 +13,6 @@ int GetNumber(string text)
     return Math.Abs(Convert.ToInt32(Console.ReadLine()));
 }
 
-int N = GetNumber("Введите число: ");
-
 int Sum(int number)
 {
     int SumIndex = 0;
@@ -26,8 +24,17 @@ int Sum(int number)
     return SumIndex;
 }
 
+int N = GetNumber("Введите число: ");
 System.Console.WriteLine($"Сумма цифр в числе равна: {Sum(N)} ");
 
 
 
 // 2 версия(через массив).
+
+// int[] GetNumber(int[] text)
+// {
+//     System.Console.WriteLine[text];
+//     return Convert.ToInt32(Console.ReadLine(text));
+// }
+
+// int[] N = GetNumber("Введите число: ");

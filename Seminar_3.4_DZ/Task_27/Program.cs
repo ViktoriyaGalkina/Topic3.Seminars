@@ -18,16 +18,15 @@ int N = GetNumber("Введите число: ");
 int Sum(int number)
 {
     int SumIndex = 0;
-    for (int i = 0; i <= N; i++)
+    for (int i = 0; i <= number; i++) 
     {
         SumIndex = SumIndex + N % 10;
         N = N / 10;
     }
     return SumIndex;
 }
-int res = Sum(N);
-System.Console.WriteLine($"Сумма цифр в числе равна: {res} ");
 
+System.Console.WriteLine($"Сумма цифр в числе равна: {Sum(N)} ");
 
 
 

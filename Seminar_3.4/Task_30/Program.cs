@@ -50,7 +50,7 @@
 
 
 
-// ---------- Версия 2
+// ---------- Версия 2 через void обе функции.
 void GetArray(int[] arr)
 {
     var rand = new Random();

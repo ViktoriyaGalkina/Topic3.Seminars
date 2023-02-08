@@ -7,45 +7,45 @@
 
 // 1 версия (математическая).(не работает с числами,которые начинаются с 1)
 
-int GetNumber(string text)
-{
-    System.Console.WriteLine(text);
-    return Math.Abs(Convert.ToInt32(Console.ReadLine()));
-}
+// int GetNumber(string text)
+// {
+//     System.Console.WriteLine(text);
+//     return Math.Abs(Convert.ToInt32(Console.ReadLine()));
+// }
 
-int Sum(int number)
-{
-    int SumIndex = 0;
-    for (int i = 0; i < number; i++)
-    {
-        SumIndex = SumIndex + number % 10;
-        number = number / 10;
-    }
-    return SumIndex;
-}
+// int Sum(int number)
+// {
+//     int SumIndex = 0;
+//     for (int i = 0; i < number; i++)
+//     {
+//         SumIndex = SumIndex + number % 10;
+//         number = number / 10;
+//     }
+//     return SumIndex;
+// }
 
-int N = GetNumber("Введите число: ");
-System.Console.WriteLine($"Сумма цифр в числе равна: {Sum(N)} ");
+// int N = GetNumber("Введите число: ");
+// System.Console.WriteLine($"Сумма цифр в числе равна: {Sum(N)} ");
 
 
 
 // 2.1 версия(через массив)(1 вариант)  // Работает,но без второй функции.
 
-// string GetNumber(string text)
-// {
-//     System.Console.WriteLine(text);
-//     return Console.ReadLine();
-// }
+string GetNumber(string text)
+{
+    System.Console.WriteLine(text);
+    return Console.ReadLine();
+}
 
-// string N = GetNumber("Введите число: ");
+string N = GetNumber("Введите число: ");
 
-// int res = 0;
-// for (int i = 0; i < N.Length; i++)
-// {
-//     int Converted = Convert.ToInt32(Convert.ToString(N[i]));
-//     res = res + Converted;
-// }
-// System.Console.WriteLine($"Сумма цифр в числе равна: " + res);
+int res = 0;
+for (int i = 0; i < N.Length; i++)
+{
+    int Converted = Convert.ToInt32(Convert.ToString(N[i]));
+    res = res + Converted;
+}
+System.Console.WriteLine($"Сумма цифр в числе равна: " + res);
 
 
 
@@ -61,7 +61,7 @@ System.Console.WriteLine($"Сумма цифр в числе равна: {Sum(N)
 
 // int SumNumbers(int[] len)
 // {
-//     var res = 0;
+//     int res = 0;
 //     for (int i = 0; i < len.Length; i++)
 //     {
 //         res = res + len[i];

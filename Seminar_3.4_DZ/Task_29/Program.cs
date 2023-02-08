@@ -12,10 +12,10 @@ int GetNumber(string text)
 
 int[] GetArray(int[] size, int leftRange, int rightRange)
 {
-    var rand = new Random();
+    var rand = new Random();  
     for (int i = 0; i < size.Length; i++)
     {
-        size[i] = rand.Next(leftRange, rightRange+1);
+        size[i] = rand.Next(leftRange, rightRange+1);       
     }
     return size;
 }

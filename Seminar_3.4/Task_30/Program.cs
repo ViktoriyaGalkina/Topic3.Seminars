@@ -51,16 +51,16 @@
 
 
 // ---------- Версия 2 через void обе функции.
-void GetArray(int[] arr)
+void GetArray(int[] arr)              // Функция заполняет массив рандомными числами
 {
-    var rand = new Random();
+    var rand = new Random();           // Random rand = new Random();   задаем рандомное число
     for (int i = 0; i < arr.Length; i++)
     {
-        arr[i] = rand.Next(0, 2);
+        arr[i] = rand.Next(0, 2);      // Массиву присваиваем массив случайно сгенерированных чисел с заданными параметрами rand.Next
     }
 }
 
-void PrintArray(int[] arr)
+void PrintArray(int[] arr)            // Функция выводит массив в заданном виде
 {
     System.Console.WriteLine("[" + string.Join(", ", arr) + "]");
 }

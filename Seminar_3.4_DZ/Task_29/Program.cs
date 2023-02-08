@@ -27,7 +27,7 @@ void PrintArray(int[] arr)
 
 int A = GetNumber("Введите левую границу массива: ");
 int B = GetNumber("Введите правую границу массива: ");
-int C = GetNumber("Введите количество элементов массива: ");
+int C = GetNumber("Введите количество элементов массива: "); // Опционально,т.к. условия задачи этого не требуют.
 
 var arr = new int[C];
 var myArray = GetArray(arr,A,B);

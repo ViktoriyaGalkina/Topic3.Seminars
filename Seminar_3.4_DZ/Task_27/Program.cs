@@ -31,44 +31,45 @@
 
 // 2.1 версия(через массив)(1 вариант)  // Работает,но без второй функции.
 
-string GetNumber(string text)
-{
-    System.Console.WriteLine(text);
-    return Console.ReadLine();
-}
+// string GetNumber(string text)
+// {
+//     System.Console.WriteLine(text);
+//     return Console.ReadLine();
+// }
 
-string N = GetNumber("Введите число: ");
+// string N = GetNumber("Введите число: ");
 
-int res = 0;
-for (int i = 0; i < N.Length; i++)
-{
-    int Converted = Convert.ToInt32(Convert.ToString(N[i]));
-    res = res + Converted;
-}
-System.Console.WriteLine($"Сумма цифр в числе равна: " + res);
+// int res = 0;
+// for (int i = 0; i < N.Length; i++)
+// {
+//     int Converted = Convert.ToInt32(Convert.ToString(N[i]));
+//     res = res + Converted;
+// }
+// System.Console.WriteLine($"Сумма цифр в числе равна: " + res);
 
 
 
 // 2.2 версия(через массив)(2 вариант - если все преобразую в функции - выдает ошибку : 
-// (73,25): error CS1503: Аргумент 1: не удается преобразовать из "int" в "int[]".
+// (73,25): error CS1503: Аргумент 1: не удается преобразовать из "int" в "int[]"
+// Не понимаю,как мне N из int в int[] преобразовать.Т.к. N это же не чар переменная,если я правильно поняла.
 
 
-// int GetNumber(string text)
-// {
-//     System.Console.WriteLine(text);
-//     return Convert.ToInt32(Console.ReadLine());
-// }
+int GetNumber(string text)
+{
+    System.Console.WriteLine(text);
+    return Convert.ToInt32(Console.ReadLine());
+}
 
-// int SumNumbers(int[] len)
-// {
-//     int res = 0;
-//     for (int i = 0; i < len.Length; i++)
-//     {
-//         res = res + len[i];
-//     }
-//     return res;
-// }
+int SumNumbers(int[] len)
+{
+    int res = 0;
+    for (int i = 0; i < len.Length; i++)
+    {
+        res = res + len[i];
+    }
+    return res;
+}
 
-// int N = GetNumber("Введите число: ");
-// int result = SumNumbers(N);
-// System.Console.WriteLine($"Сумма цифр в числе равна: " + result);
+int N = GetNumber("Введите число: ");
+int result = SumNumbers(N);
+System.Console.WriteLine($"Сумма цифр в числе равна: " + result);

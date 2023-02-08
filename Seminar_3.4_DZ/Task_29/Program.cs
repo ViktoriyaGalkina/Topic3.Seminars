@@ -15,7 +15,7 @@ int[] GetArray(int[] size, int leftRange, int rightRange)
     var rand = new Random();
     for (int i = 0; i < size.Length; i++)
     {
-        size[i] = rand.Next(leftRange, rightRange);
+        size[i] = rand.Next(leftRange, rightRange+1);
     }
     return size;
 }
@@ -27,7 +27,9 @@ void PrintArray(int[] arr)
 
 int A = GetNumber("Введите левую границу массива: ");
 int B = GetNumber("Введите правую границу массива: ");
-var arr = new int[8];
+int C = GetNumber("Введите количество элементов массива: ");
+
+var arr = new int[C];
 var myArray = GetArray(arr,A,B);
 PrintArray(myArray);
 

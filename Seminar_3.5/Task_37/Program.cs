@@ -33,7 +33,6 @@ int[] GetResult(int[] array)
     {
         arrResult[arrResult.Length - 1] = array[size-1];
     }
-
     return arrResult;
 }
 

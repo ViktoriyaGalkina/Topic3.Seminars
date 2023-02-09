@@ -22,7 +22,7 @@ void PrintArray(int[] numbers)
 int QuantityEvenNumbers(int[] arr)
 {
     int result = 0;
-    for (int i = 0; i < arr.Lenght; i++)
+    for (int i = 0; i < arr.Length; i++)
     {
         if (arr[i] % 2 == 0)
         {

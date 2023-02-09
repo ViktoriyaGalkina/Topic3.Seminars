@@ -36,3 +36,28 @@ int[] MyArray = GetArray(4, -100, 100);
 PrintArray(MyArray);
 SumElements(MyArray, out int sumOddNumbers);
 System.Console.WriteLine($"Сумма элементов, стоящих на нечётных позициях: {sumOddNumbers}");
+
+
+
+// --------2 вариант(не получается)  //Строка 46: "SumElements(int[])": не все пути к коду возвращают значение.
+//                                    В чем может быть ошибка?(
+
+
+// int SumElements(int[] array)
+// {
+//     int sumOddNumbers = 0;
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if (i % 2 == 1)
+//         {
+//             sumOddNumbers = sumOddNumbers + array[i];
+//         }
+//         return sumOddNumbers;
+//     }
+// }
+
+// int[] MyArray = GetArray(4, -100, 100);
+// PrintArray(MyArray);
+// System.Console.WriteLine(SumElements(MyArray));
+
+

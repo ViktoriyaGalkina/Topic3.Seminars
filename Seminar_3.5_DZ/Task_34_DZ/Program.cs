@@ -8,7 +8,7 @@ int[] GenerateArray(int N)
     var rand = new Random();
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = rand.Next(1, 1000);
+        array[i] = rand.Next(100, 1000);
     }
     return array;
 }
@@ -34,6 +34,6 @@ int QuantityEvenNumbers(int[] arr)
 
 int[] myArray = GenerateArray(4);
 PrintArray(myArray);
-System.Console.WriteLine(QuantityEvenNumbers(myArray));
+System.Console.WriteLine($"Количество чётных чисел в массиве: " + QuantityEvenNumbers(myArray));
 
 

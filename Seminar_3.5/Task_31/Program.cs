@@ -81,5 +81,5 @@ void SumNegativeAndPositive(int[] array, out int sumPositive, out int sumNegativ
 int[] myArray = GenerateArray(6, -9, 9);
 PrintArray(myArray);
 SumNegativeAndPositive(myArray, out int sumPositive, out int sumNegative);
-System.Console.WriteLine($"Сумма отрицательныъ элементов равна {sumNegative}");
+System.Console.WriteLine($"Сумма отрицательных элементов равна {sumNegative}");
 System.Console.WriteLine($"Сумма положительных элементов равна {sumPositive}");

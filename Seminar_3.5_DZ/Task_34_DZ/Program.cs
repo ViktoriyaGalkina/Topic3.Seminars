@@ -18,7 +18,6 @@ void PrintArray(int[] numbers)
     System.Console.WriteLine("[" + string.Join("; ", numbers) + "]");
 }
 
-
 int QuantityEvenNumbers(int[] arr)
 {
     int result = 0;

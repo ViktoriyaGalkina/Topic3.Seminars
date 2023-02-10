@@ -20,53 +20,67 @@ void PrintArray(double[] array)
     System.Console.WriteLine("[" + string.Join("; ", array) + "]");
 }
 
-
-double[] MyArray = GetArray(4, 0, 20);
-PrintArray(MyArray);
-
-
-int Max = 0;
-int[] arr = new int[MyArray];
-for(int i = 0; i < arr.Length-1; i++) //-1
+double MinValue(double[] array)
 {
-    int minPosition = j;
-    for(int j = i+1;j< arr.Length; j++)
+    double min = array[0];
+    for (int i = 0; i < array.Length; i++)
     {
-         if (arr[j] < arr[minPosition])
+       if (array[i] < min)
             {
-                minPosition = j;
+                min = array[i];
             }
     }
+    return min;
+}
+
+double MaxValue(double[] array)
+{
+    double max = array[0];
+    for (int i = 0; i < array.Length; i++)
+    {
+       if (array[i] > max)
+            {
+                max = array[i];
+            }
+          
+    }
+    return max;
 }
 
 
+double[] MyArray = GetArray(4, 0, 20);
+PrintArray(MyArray);
+System.Console.WriteLine($"Максимальный элемент массива: " + Math.Round(MaxValue(MyArray),2));
+System.Console.WriteLine($"Минимальный элемент массива: " + Math.Round(MinValue(MyArray),2));
+System.Console.WriteLine($"Разница между максимальным и минимальным элементом массива: " + Math.Round((MaxValue(MyArray)-MinValue(MyArray)),2));
 
-// void selectionSort(double[] array)
+
+
+
+
+// double MaxValue(double[] array)
 // {
-//     for (int i = 0; i < array.Length - 1; i++)
+//     double max = 0;
+//     for (int i = 0; i < array.Length-1; i++)
 //     {
-//         int minPosition = i;
+//         int minNumber = i;
 //         for (int j = i + 1; j < array.Length; j++)
-//         {
-//             if (array[j] < array[minPosition])
+//             if (array[j] > array[minNumber])
 //             {
-//                 minPosition = j;
+//                 max =  array[j];
 //             }
-//         }
-//         double temporary = array[i];
-//         array[i] = array[minPosition];
-//         array[minPosition] = temporary;
+//             else
+//             {
+//                max = array[minNumber];
+//             }
 //     }
-// }
+//     return max;
 
 
-
-
-
-// selectionSort(MyArray);
-
-
-
+// double[] MyArray = GetArray(4, 0, 20);
+// PrintArray(MyArray);
+// System.Console.WriteLine($"Минимальное: " + MinValue(MyArray));
+// System.Console.WriteLine($"Максимальное: " + MaxValue(MyArray));
 
 
 

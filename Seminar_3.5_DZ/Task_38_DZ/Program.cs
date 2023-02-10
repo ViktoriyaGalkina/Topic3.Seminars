@@ -20,6 +20,8 @@ void PrintArray(double[] array)
     System.Console.WriteLine("[" + string.Join("; ", array) + "]");
 }
 
+
+// ------------- 1 вариант.
 double MinValue(double[] array)
 {
     double min = array[0];
@@ -42,7 +44,6 @@ double MaxValue(double[] array)
         {
             max = array[i];
         }
-
     }
     return max;
 }
@@ -52,3 +53,35 @@ PrintArray(MyArray);
 System.Console.WriteLine($"Максимальный элемент массива: " + Math.Round(MaxValue(MyArray), 2));
 System.Console.WriteLine($"Минимальный элемент массива: " + Math.Round(MinValue(MyArray), 2));
 System.Console.WriteLine($"Разница между максимальным и минимальным элементом массива: " + Math.Round((MaxValue(MyArray) - MinValue(MyArray)), 2));
+
+
+// ------------ 2 вариант.
+// double[] Value(double[] array)
+// {
+//     double[] result = new double[2];
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if (array[i] < array[0])
+//         {
+//             result[0] = array[i];
+//         }
+//         else
+//         {
+//             result[1] = array[i];
+//         }
+//     }
+//     return result;
+// }
+
+
+// double[] MyArray = GetArray(4, 0, 20);
+// PrintArray(MyArray);
+// double[] MaxMin = Value(MyArray);
+// System.Console.WriteLine($"Максимальный элемент массива: " + Math.Round(MaxMin[1], 2));
+// System.Console.WriteLine($"Минимальный элемент массива: " + Math.Round(MaxMin[0], 2));
+// System.Console.WriteLine($"Разница между максимальным и минимальным элементом массива: " + Math.Round((MaxMin[1] - MaxMin[0]), 2));
+
+
+// Можно ли каким-то образом использовать здесь out int переменные,только для переменных типа double?
+// Я пробовала конветировать из int в double,но функция все время ругалась на тип переменных.
+

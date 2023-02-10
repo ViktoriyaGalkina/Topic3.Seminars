@@ -44,9 +44,9 @@ void PrintArray(int[] array)
 //     return result;
 // }
 
-// int[] SumNegativeAndPositive(int[] array)
+// int[] SumNegativeAndPositive(int[] array)     // Сумму находим через создание нового массива и там будут лежать дваа значения.
 // {
-//     int[] result = new int[2];
+//     int[] result = new int[2];                // Задаем массив,который хранит 2 элемента с суммой мин и макс значений.
 //     for (int i = 0; i < array.Length; i++)
 //     {
 //         if (array[i] < 0)

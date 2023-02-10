@@ -44,6 +44,10 @@ void PrintArray(int[] array)
 //     return result;
 // }
 
+
+
+
+// 2 вариант.
 // int[] SumNegativeAndPositive(int[] array)     // Сумму находим через создание нового массива и там будут лежать дваа значения.
 // {
 //     int[] result = new int[2];                // Задаем массив,который хранит 2 элемента с суммой мин и макс значений.
@@ -59,7 +63,11 @@ void PrintArray(int[] array)
 //         }
 //     }
 //     return result;
-// }
+// 
+
+
+
+// 3 вариант с out int.
 
 void SumNegativeAndPositive(int[] array, out int sumPositive, out int sumNegative)
 {

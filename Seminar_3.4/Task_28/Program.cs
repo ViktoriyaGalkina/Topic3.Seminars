@@ -8,7 +8,7 @@ int GetNumber(string text)
     System.Console.Write(text);
     return Convert.ToInt32(Console.ReadLine());
 }
-int num = GetNumber("Введите число: ");
+
 int Multyply(int x)
 {
     int result = 1;
@@ -20,5 +20,4 @@ int Multyply(int x)
 }
 
 int num = GetNumber("Введите число: ");
-
 System.Console.WriteLine($"Произведение чисел от 1 до {num} = {Multyply(num)}");

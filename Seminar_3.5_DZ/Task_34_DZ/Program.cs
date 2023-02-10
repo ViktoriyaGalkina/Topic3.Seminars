@@ -25,7 +25,7 @@ int QuantityEvenNumbers(int[] arr)
     {
         if (arr[i] % 2 == 0)
         {
-            result+=1;
+            result += 1;
         }
     }
     return result;

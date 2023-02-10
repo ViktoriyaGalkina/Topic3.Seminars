@@ -47,58 +47,8 @@ double MaxValue(double[] array)
     return max;
 }
 
-
 double[] MyArray = GetArray(4, 0, 20);
 PrintArray(MyArray);
 System.Console.WriteLine($"Максимальный элемент массива: " + Math.Round(MaxValue(MyArray),2));
 System.Console.WriteLine($"Минимальный элемент массива: " + Math.Round(MinValue(MyArray),2));
 System.Console.WriteLine($"Разница между максимальным и минимальным элементом массива: " + Math.Round((MaxValue(MyArray)-MinValue(MyArray)),2));
-
-
-
-
-
-// double MaxValue(double[] array)
-// {
-//     double max = 0;
-//     for (int i = 0; i < array.Length-1; i++)
-//     {
-//         int minNumber = i;
-//         for (int j = i + 1; j < array.Length; j++)
-//             if (array[j] > array[minNumber])
-//             {
-//                 max =  array[j];
-//             }
-//             else
-//             {
-//                max = array[minNumber];
-//             }
-//     }
-//     return max;
-
-
-// double[] MyArray = GetArray(4, 0, 20);
-// PrintArray(MyArray);
-// System.Console.WriteLine($"Минимальное: " + MinValue(MyArray));
-// System.Console.WriteLine($"Максимальное: " + MaxValue(MyArray));
-
-
-
-// double[] GetArray(int size)
-// {
-//     double[] array = new double[size];
-//     var rand = new Random();
-//     for (int i = 0; i < array.Length; i++)
-//     {
-//         array[i] =  Math.Round(rand.NextDouble()*100,2);
-//     }
-//     return array;
-// }
-
-// void PrintArray(double[] array)
-// {
-//     System.Console.WriteLine("[" + string.Join("; ", array) + "]");
-// }
-
-// double[] MyArray = GetArray(4);
-// PrintArray(MyArray);

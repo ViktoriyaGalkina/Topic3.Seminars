@@ -21,7 +21,6 @@ int[] CopyPaste(int[] array)
         array2[i] = array[i];
     }
     return array2;
-
 }
 
 void PrintArray(int[] array)

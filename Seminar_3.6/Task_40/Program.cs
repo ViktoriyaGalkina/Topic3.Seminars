@@ -2,10 +2,11 @@
 // может ли существовать треугольник с сторонами такой длины.
 
 
-System.Console.WriteLine("Введите числа: ");
+metka:                                                                   // Если условие не выполняется-программа возвращ ко вводу числа
+System.Console.WriteLine("Введите 3 числа через пробел: ");
 int[] array = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);   // Конверт - выводит заданный текст в нужный тип переменных!!!
                                                                          // {1},{2},{3} -> {1,2,3}
-if (array.Length != 3)
+if (array.Length != 3)                                                   // != не равно
 {
     System.Console.WriteLine("Массив введён некоректно ");
     goto metka;

@@ -13,7 +13,7 @@
 
 System.Console.WriteLine("Введите пятизначное число: ");
 string number = Console.ReadLine();
-int arr = number.Length;
+int arr = number!.Length;
 
 if (arr == 5)
  {

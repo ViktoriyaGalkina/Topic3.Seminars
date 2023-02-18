@@ -50,9 +50,7 @@ void ZamenaNechet(int[,] matr)
     {
         for (int j = 1; j < matr.GetLength(1); j += 2)
         {
-
             matr[i, j] = matr[i, j] * matr[i, j];
-
         }
     }
 }

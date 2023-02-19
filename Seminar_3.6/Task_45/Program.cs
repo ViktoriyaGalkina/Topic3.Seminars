@@ -27,6 +27,7 @@ void PrintArray(int[] array)
 {
     System.Console.WriteLine("[" + string.Join(", ", array) + "]");
 }
+
 int[] arr = GenerateArray(5, 0, 100);
 PrintArray(arr);
 int[] arrCopy = CopyPaste(arr);

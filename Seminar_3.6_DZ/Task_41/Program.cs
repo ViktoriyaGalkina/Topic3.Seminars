@@ -35,10 +35,6 @@ int PositiveNumbers(int[] numbers)
     return count;
 }
 
-
 int[] M = GetNumber("Введите 5 чисел через пробел: ");
 PrintArray(M);
 System.Console.WriteLine($"Вы ввели положительных чисел: " + PositiveNumbers(M));
-
-
-

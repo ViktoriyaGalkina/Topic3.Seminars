@@ -18,8 +18,6 @@
 // 4 встречается 1 раз 
 // 6 встречается 2 раза
 
-// Задача 55: Задайте двумерный массив. Напишите программу, которая заменяет строки на столбцы.
-
 
 int ReadInt(string text)
 {
@@ -53,30 +51,53 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-void Chastota(int[,] matrix)
-{
+// void Chastota(int[,] matrix)
+// {
 
-    for (int l = 0; l < 10; l++)
+//     for (int l = 0; l < 10; l++)
+//     {
+//         int count = 0;
+//         for (int i = 0; i < matrix.GetLength(0); i++)
+//         {
+//             for (int j = 0; j < matrix.GetLength(1); j++)
+//             {
+//                 // count = (l == matrix[i, j]) ? count++ : count + 0;
+//                 if (l == matrix[i, j]) count++;
+//             }
+//         }
+//         if (count > 0)
+//         {
+//             System.Console.WriteLine($"{l} встречаетмя {count} раз");
+//         }
+//     }
+// }
+
+int[] Chastota(int[,] matrix)
+{
+    var count = new int[10];
+    for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        int count = 0;
-        for (int i = 0; i < matrix.GetLength(0); i++)
+        for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            for (int j = 0; j < matrix.GetLength(1); j++)
-            {
-                // count = (l == matrix[i, j]) ? count++ : count + 0;
-                if (l == matrix[i, j]) count++;
-            }
+            count[matrix[i, j]]++;
         }
-        if (count > 0)
+    }
+    return count;
+}
+
+void PrintData(int[] arr)
+{
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i] != 0)
         {
-            System.Console.WriteLine($"{l} встречаетмя {count} раз");
+            System.Console.WriteLine($"{i} значение встречается {arr[i]} раз");
         }
     }
 }
-
 int rows = ReadInt("Введите количество строк матрицы: ");
 int cols = ReadInt("Введите количество столбцов матрицы: ");
 
 var myMatrix = GenerateMatrix(rows, cols);
 PrintMatrix(myMatrix);
-Chastota(myMatrix);
+PrintData(Chastota(myMatrix));

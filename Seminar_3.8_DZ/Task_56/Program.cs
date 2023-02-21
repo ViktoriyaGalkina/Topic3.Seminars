@@ -48,9 +48,9 @@ void RowsMinSum(int[,] matr)
     int sumRow = 0;
     int minRow = 0;
     int minSumRow = 0;
-    for (int i = 0; i < matr.GetLength(1); i++)
+    for (int j = 0; j < matr.GetLength(1); j++)
     {
-        minRow += matr[0, i];
+        minRow += matr[0, j];
     }
     for (int i = 0; i < matr.GetLength(0); i++)
     {

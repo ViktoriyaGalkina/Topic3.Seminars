@@ -21,7 +21,7 @@ int[,] GenerateMatrix(int rows, int cols)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            matrix[i, j] = rand.Next(0, 10);
+            matrix[i, j] = rand.Next(0,5);
         }
     }
     return matrix;
@@ -40,14 +40,37 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
+int[,] MatrixMultiplication(int[,] M, int[,] N)
+{
+    if (M.GetLength(0) != N.GetLength(1))
+    {
+        System.Console.WriteLine("Перемножение матриц невозможно!Кол-во строк 1 матрицы должно быть равно кол-ву столбцов 2 матрицы.");
+    }
+    int[,] multi = new int[M.GetLength(0), N.GetLength(1)];
+    for (int i = 0; i < M.GetLength(0); i++)
+    {
+        for (int j = 0; j < N.GetLength(1); j++)
+        {
+            for (int k = 0; k < M.GetLength(1); k++)
+            {
+                multi[i, j] += M[i, k] * N[k, j];
+            }
+        }
+    }
+    return multi;
+}
+
 
 int rowsA = ReadInt("Введите количество строк 1 матрицы: ");
 int colsA = ReadInt("Введите количество столбцов 1 матрицы: ");
 int rowsB = ReadInt("Введите количество строк 2 матрицы: ");
 int colsB = ReadInt("Введите количество столбцов 2 матрицы: ");
-var myMatrix = GenerateMatrix(rowsA, colsA);
+var myMatrixA = GenerateMatrix(rowsA, colsA);
 System.Console.WriteLine();
-PrintMatrix(myMatrix);
-System.Console.WriteLine();
-var myMatrixA = GenerateMatrix(rowsB, colsB);
 PrintMatrix(myMatrixA);
+System.Console.WriteLine();
+var myMatrixB = GenerateMatrix(rowsB, colsB);
+PrintMatrix(myMatrixB);
+System.Console.WriteLine();
+System.Console.WriteLine($"Результирующая матрица: ");
+PrintMatrix(MatrixMultiplication(myMatrixA, myMatrixB));

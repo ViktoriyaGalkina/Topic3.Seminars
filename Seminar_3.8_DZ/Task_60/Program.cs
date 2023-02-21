@@ -24,7 +24,7 @@ int[,,] GenerateMatrix(int rows, int cols, int heights)
         {
             for (int k = 0; k < matrix.GetLength(2); k++)
             {
-                matrix[i, j, k] = rand.Next(10,100);
+                matrix[i, j, k] = rand.Next(10, 100);
             }
         }
     }
